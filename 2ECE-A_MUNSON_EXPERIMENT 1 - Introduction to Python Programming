@@ -1,0 +1,66 @@
+Alphabet Soup Problem
+
+#Define the function
+def alphabet_soup(word):
+    #Sort the letters of an inputted word
+    sort_letters = sorted(word)
+
+    #Join together the letters after sorting
+    sorted_word = ''.join(sort_letters)
+    
+    return sorted_word
+
+#Sample output:
+result = alphabet_soup("Skibidi123")
+print(result) 
+#Output should be: "123Sbdiiik" (Sort is based on ASCII; numbers first, then uppercase letters, and then lowercase letters.)
+
+Emoticon Problem
+#Define the function
+def emotify(sentence):
+    #Create a library that maps words to emoticons
+    emotify_words = {
+        "smile": ":)",
+        "grin": ":D",
+        "sad": ":((",
+        "mad": ">:("
+    }
+
+    #Split sentence in order to let the function be able to swap a specific word in a sentence
+    words = sentence.split()
+
+    #Emotify the words
+    emotified_words = [emotify_words.get(word, word) for word in words]
+
+    #Join together the words along with the emoticons into a sentence
+    emotified_sentence = ' '.join(emotified_words)
+
+    return emotified_sentence
+
+#Sample output:
+result = emotify("I wish I could smile at you and see you grin back at me again. I feel sad when I think about it, then I go mad remembering our days together.")
+print(result)
+
+#Output should be: "I wish I could :) at you and see you :D back at me again. I feel :(( when I think about it, then I go >:( remembering our days together."
+
+
+
+Unpacking List Problem
+#Make list of numbers
+numbers_on_the_board = [1, 2, 3, 4, 5, 6]
+
+#Assign elements to variables to unpack
+first = (numbers_on_the_board[0])
+middle = (numbers_on_the_board[1:5])
+last = (numbers_on_the_board[-1])
+
+
+#Print variables
+print(first)
+print(middle)
+print(last)
+
+#Output should be:
+#print(first) = 1
+#print(middle) = [2, 3, 4, 5]
+#print(last) = 6
